@@ -1,0 +1,299 @@
+/**
+    General styles
+ */
+ @charset "UTF-8";
+
+
+ :root{
+     --primary: #132F40;
+     --secondary: #51868C;
+     --third: #F27D52;
+     --bg: #F2EDD0;
+     --green: #2ad573;
+     --red: #ff5640;
+     --black: #505050;
+ }
+ 
+ /**
+     Fonts import
+  */
+ 
+ @font-face {
+     font-family: "Montserrat";
+     src: url("../fonts/Montserrat/Montserrat-Light.ttf");
+ }
+ 
+ @font-face {
+     font-family: "Montserrat";
+     font-weight: bold;
+     src: url("../fonts/Montserrat/Montserrat-Bold.ttf");
+ }
+ 
+ /**
+     Resets css
+  */
+ *{
+     margin: 0;
+     padding: 0;
+     border: none;
+     outline: none;
+     box-sizing: border-box;
+     transition: .4s all ease;
+     word-break: break-word;
+     color: var(--black);
+     text-decoration: none;
+     list-style: none;
+ }
+ 
+ /**
+     General styles
+  */
+ html{
+     scroll-behavior: smooth;
+ }
+ 
+ body{
+     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+     width: 100%;
+     overflow-x: hidden;
+ }
+ 
+ .container, .navbar{
+     padding-left: 50px;
+     padding-right: 50px;
+ }
+ 
+ 
+ /**
+     Styles of navbar
+  */
+ .navbar{
+     margin-bottom: 30px;
+     width: 100%;
+     background: #0a4c95;/*var(--primary);*/
+     display: flex;
+     align-items: center;
+ }
+ 
+ .navbar-brand{
+     color: #fff;
+     font-weight: bold;
+     font-size: 30px;
+ }
+ 
+ .navbar-nav{
+     display: flex;
+     margin-left: auto;
+ }
+ 
+ .navbar-nav li{
+     padding: 20px;
+ }
+ 
+ .nav-link{
+     color: #fff;
+     opacity: .7;
+     position: relative;
+ }
+ 
+     .nav-link::after{
+         content: '';
+         position: absolute;
+         width: 0%;
+         height: 2px;
+         background: #fff;
+         left: 100%;
+         bottom: -4px;
+         transition: .5s ease;
+     }
+ 
+     .nav-link:hover{
+         opacity: 1;
+     }
+ 
+         .nav-link:hover::after{
+             width: 100%;
+             left: 0;
+             transition: .5s ease;
+         }
+         
+
+
+         
+    .navbar-light .navbar-brand {
+        color: #f8f9fa !important;
+    }
+
+        .navbar-light .navbar-nav .show > .nav-link, .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .nav-link.active {
+            color: #f8f9fa !important;
+        }
+        .navbar-light .navbar-nav .nav-link {
+            color: #f8f9fa !important;
+        }
+
+
+    a.dropdown-item:hover{
+       background:#0a4c95 !important;
+       color: #f8f9fa !important;
+        }
+ 
+
+        button.navbar-toggler {
+            border-color: #f8f9fa !important;
+        }
+
+
+  .bienvenido{
+ 
+     color:white;
+  }       
+ 
+ /**
+     Fonts styles
+  */
+ 
+ h1, h2, h3{
+     font-family: 'Montserrat';
+     font-weight: bold;
+     margin-bottom: 20px;
+ }
+ 
+ h1{
+     color: var(--primary);
+ }
+ 
+ p{
+     color: var(--black);
+ }
+ 
+ /**
+     Bottoms styles
+  */
+ 
+ .btn{
+     padding: 8px 12px;
+     border-radius: 5px;
+     color: #fff;
+     background: var(--primary);
+     cursor: pointer;
+ }
+ 
+     .btn:hover{
+         transform: translateY(-1px);
+         box-shadow: 0 5px 5px #00000014;
+     }
+     
+     .btn-green{
+         color: #fff;
+         background-color: var(--green);
+     }
+ 
+     .btn-outline-green{
+         border: 1px solid var(--green);
+         color: var(--green);
+         background: transparent;
+     }
+ 
+     .btn-outline-green:hover{
+         border: 1px solid var(--green);
+         color: #fff;
+         background: var(--green);
+     }
+ 
+     .btn-outline-red{
+         background: transparent;
+         border: transparent;
+         color: var(--red);
+     }
+ 
+ 
+     .texto_campo{
+        width: 120px  !important;
+     }
+ 
+     .panel{
+   
+        background: #f3eeee;
+        padding: 50px;
+        box-shadow: 0 5px 5px #0000000f;
+    }
+    
+    .largo{
+        
+         width: 90% !important;
+
+    }
+
+
+    fieldset.scheduler-border {
+        border: 1px groove #ddd !important;
+        padding: 0 1.4em 1.4em 1.4em !important;
+        margin: 0 0 1.5em 0 !important;
+        -webkit-box-shadow:  0px 0px 0px 0px #000;
+                box-shadow:  0px 0px 0px 0px #000;
+        background-color: white;
+    }
+
+    legend.scheduler-border {
+        font-size: 1.2em !important;
+        font-weight: bold !important;
+        text-align: left !important;
+        width:auto;
+        padding:0 10px;
+        border-bottom:none;
+      
+    }
+
+    .ocultar{
+
+        display: none;
+    }
+
+
+    #tabla_estilizada th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #194470;
+        color: white;
+      }
+
+
+    #tabla_estilizada td, #tabla_estilizada th {
+        border: 1px solid #ddd;
+        padding: 8px;
+      }
+      
+    #tabla_estilizada tr:nth-child(odd){background-color:  #f9f9f9;}
+    #tabla_estilizada tr:nth-child(even){background-color: #f2f2f2;}
+
+    #tabla_estilizada tr:hover {background-color: #ddd;}
+
+
+    .fa-plus {
+        color: rgb(164, 189, 183) !important;
+    }
+
+
+    .fa-edit {
+        color: rgb(86, 194, 101) !important;
+    }
+
+    .fa-trash {
+        color: rgb(139, 28, 52) !important;
+    }
+
+    .fa-lock {
+        color: rgb(240, 242, 243) !important;
+    }
+
+    .fa-user {
+        color: rgb(240, 242, 243) !important;
+    }
+
+
+ .input-group-text{
+    background-color: #25af44 !important;
+    }
+
+  
